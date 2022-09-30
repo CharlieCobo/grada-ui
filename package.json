@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -12,9 +12,10 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build && yarn sass",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
+    "sass": "sass src/sass:dist/css",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
