@@ -14,12 +14,17 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "url": "https://github.com/CharlieCobo/grada-ui",
+    "type": "git"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -36,7 +41,7 @@
     "trailingComma": "es5"
   },
   "name": "grada-ui",
-  "author": "Carlos Cobo",
+  "author": "Carlos Cobo <charlie.cobo@gmail.com>",
   "module": "dist/grada-ui.esm.js",
   "size-limit": [
     {
@@ -50,6 +55,8 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@babel/preset-react": "^7.18.6",
     "@rollup/plugin-image": "^2.1.1",
     "@size-limit/preset-small-lib": "^8.1.0",
     "@storybook/addon-essentials": "^6.5.12",
@@ -60,13 +67,18 @@
     "@storybook/react": "^6.5.12",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.1.2",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.1.2",
     "postcss": "^8.4.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.55.0",
     "sass-loader": "^13.0.2",
@@ -76,5 +88,18 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.8.4"
-  }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
+  "keywords": [
+    "grada",
+    "ui-kit",
+    "grada-ui",
+    "carlos",
+    "cobo"
+  ]
 }
