@@ -1,0 +1,93 @@
+:root {
+  --primary: #f27a54;
+  --secondary: #a154f2;
+  --tertiary: #6fcf97;
+  --black: #000000;
+  --white: #ffffff;
+  --dark: #30363d;
+  --grey-400: #3c444c;
+  --grey-300: #747d88;
+  --grey-200: #cbcfd4;
+  --grey-100: #f2f4f7;
+  --blue-gradient: linear-gradient(180deg, #2b9aff 0%, #0080f6 100%);
+  --orange-gradient: linear-gradient(180deg, #ffa32c 0%, #ff960f 100%);
+  --turquoise-gradient: linear-gradient(180deg, #00c6f1 0%, #00b3da 100%);
+  --aqua-gradient: linear-gradient(225deg, #00c38a 0%, #16bdd8 100%);
+  --red-gradient: linear-gradient(180deg, #fa0d2e 0%, #ef0021 100%);
+  --green-gradient: linear-gradient(180deg, #02cbaa 0%, #00b882 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--dark);
+}
+
+.btn, .btn-secondary, .btn-primary {
+  padding: 1.4rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  min-width: 12rem;
+}
+.btn:disabled, .btn-secondary:disabled, .btn-primary:disabled {
+  cursor: not-allowed;
+}
+.btn:hover, .btn-secondary:hover, .btn-primary:hover {
+  opacity: 0.8;
+}
+.btn:hover:disabled, .btn-secondary:hover:disabled, .btn-primary:hover:disabled {
+  opacity: 1;
+}
+.btn:active, .btn-secondary:active, .btn-primary:active {
+  opacity: 0.9;
+}
+.btn:active:disabled, .btn-secondary:active:disabled, .btn-primary:active:disabled {
+  opacity: 1;
+}
+
+.is-small {
+  padding: 0.9rem 1.6rem;
+}
+
+.btn-primary {
+  color: var(--white);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+}
+.btn-primary:disabled {
+  color: var(--grey-300);
+  background: var(--grey-200);
+}
+
+.btn-secondary {
+  color: var(--white);
+  border: 0.1rem solid var(--white);
+}
+.btn-secondary:disabled {
+  color: var(--grey-200);
+  border: 0.1rem solid var(--grey-200);
+}
+
+/*# sourceMappingURL=main.css.map */

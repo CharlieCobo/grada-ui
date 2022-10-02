@@ -15,7 +15,7 @@
     "build": "tsdx build && yarn sass",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
-    "sass": "sass src/sass:dist/css",
+    "sass": "sass src/sass:src/css",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
