@@ -6,7 +6,7 @@ export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   small?: boolean;
 }
 
-export const Button = ({ label, variant, small }: Props) => {
+export const Button = ({ label, variant, small, ...props }: Props) => {
   const styles = useMemo(
     () =>
       [small ? 'is-small' : '', variant ? 'btn-secondary' : 'btn-primary'].join(
@@ -14,5 +14,9 @@ export const Button = ({ label, variant, small }: Props) => {
       ),
     [variant, small]
   );
-  return <button className={styles}>{label}</button>;
+  return (
+    <button className={styles} {...props}>
+      {label}
+    </button>
+  );
 };

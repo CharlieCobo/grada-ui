@@ -29,4 +29,5 @@ Default.args = {
   label: 'Primary Call to Action',
   variant: false,
   small: false,
+  disabled: true,
 };

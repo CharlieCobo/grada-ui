@@ -9,6 +9,23 @@
   font-size: 1rem;
   line-height: 1.2rem;
   min-width: 12rem;
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    &:disabled {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.9;
+    &:disabled {
+      opacity: 1;
+    }
+  }
 }
 
 .is-small {
@@ -19,10 +36,19 @@
   @extend .btn;
   color: $white;
   background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+
+  &:disabled {
+    color: $grey-300;
+    background: $grey-200;
+  }
 }
 
 .btn-secondary {
   @extend .btn;
   color: $white;
   border: 0.1rem solid $white;
+  &:disabled {
+    color: $grey-200;
+    border: 0.1rem solid $grey-200;
+  }
 }
