@@ -1,0 +1,125 @@
+.input__label {
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: $grey-200;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+}
+
+.input__wrapper {
+  position: relative;
+  display: flex;
+  background-color: $white;
+  border-radius: 0.3rem;
+  width: 100%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0.3rem 0 0 0.3rem;
+    width: 0.4rem;
+    background-color: $tertiary;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+    box-sizing: border-box;
+  }
+
+  &:focus-within::before {
+    transform: scaleY(1);
+  }
+
+  & input,
+  & button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $grey-400;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.4rem;
+
+  &::-webkit-input-placeholder {
+    /* Webkit */
+    font-family: inherit;
+    font-weight: 300;
+    color: $grey-200;
+    font-size: 1.4rem;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18-4 */
+    font-family: inherit;
+    font-weight: 300;
+    color: $grey-200;
+    font-size: 1.4rem;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: inherit;
+    font-weight: 300;
+    color: $grey-200;
+    font-size: 1.4rem;
+  }
+
+  &:-ms-input-placeholder {
+    /*  IE10+  */
+    font-family: inherit;
+    font-weight: 300;
+    color: $grey-200;
+    font-size: 1.4rem;
+  }
+}
+
+.button {
+  display: grid;
+  color: inherit;
+  place-items: center;
+  width: 3rem;
+  font-size: 2.4rem;
+  cursor: pointer;
+  transition: color 0.25s;
+
+  & > * {
+    width: 2rem;
+    height: 2rem;
+    color: inherit;
+  }
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.input__help-text {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $grey-200;
+  line-height: 1.8rem;
+}
+
+.input__error {
+  color: $error !important;
+  &:before {
+    background-color: $error;
+  }
+}
+
+.input__success {
+  color: $tertiary;
+  &:before {
+    background-color: $tertiary;
+  }
+}

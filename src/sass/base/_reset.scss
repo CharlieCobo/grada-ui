@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --primary: #f27a54;
   --secondary: #a154f2;
   --tertiary: #6fcf97;
+  --error: #cf6f8a;
   --black: #000000;
   --white: #ffffff;
   --dark: #30363d;
@@ -40,4 +43,8 @@ body {
   line-height: 1.6;
 
   background-color: var(--dark);
+}
+
+input {
+  font-family: inherit;
 }
