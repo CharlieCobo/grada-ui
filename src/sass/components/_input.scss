@@ -2,7 +2,7 @@
   display: inline-block;
   font-weight: 400;
   margin-bottom: 0.7rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: $grey-200;
   line-height: 1.8rem;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
 .input {
   width: 100%;
   padding: 1rem 1.2rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 
   &::-webkit-input-placeholder {
     /* Webkit */
@@ -104,7 +104,7 @@
 
 .input__help-text {
   margin-top: 0.7rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: $grey-200;
   line-height: 1.8rem;

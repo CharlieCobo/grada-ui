@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes, MouseEventHandler, useMemo } from 'react';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface TextProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   icon?: JSX.Element;
   helpText?: string;
@@ -9,7 +9,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onIconClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Input = ({
+export const Text = ({
   id,
   name,
   label,
@@ -19,7 +19,7 @@ export const Input = ({
   touched,
   onIconClick,
   ...props
-}: InputProps) => {
+}: TextProps) => {
   const validStyle = useMemo(
     () => (isValid ? (touched ? 'input__success' : '') : 'input__error'),
     [isValid, touched]

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Input, InputProps } from '../src/components/formElement';
+import { Input } from '../src/components/formElement';
+import { TextProps } from '../src/components/formElement/Input/Text';
 
 const Person = (
   <svg
@@ -21,7 +22,7 @@ const Person = (
 
 const meta: Meta = {
   title: 'Form Elements/Input',
-  component: Input,
+  component: Input.Text,
   argTypes: {
     label: {
       control: {
@@ -37,11 +38,11 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<InputProps> = args => <Input {...args} />;
+const Template: Story<TextProps> = args => <Input.Text {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
-export const Default: { args: InputProps } = Template.bind({});
+export const Default: { args: TextProps } = Template.bind({});
 
 Default.args = {
   label: 'Username',
