@@ -1,11 +1,5 @@
 .input__label {
-  display: inline-block;
-  font-weight: 400;
-  margin-bottom: 0.7rem;
-  font-size: 1.5rem;
-  color: $grey-200;
-  line-height: 1.8rem;
-  text-transform: uppercase;
+  @extend .label;
 }
 
 .input__wrapper {
