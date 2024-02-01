@@ -1,0 +1,14 @@
+:root {
+  --primary: #f27a54;
+  --secondary: #a154f2;
+  --tertiary: #6fcf97;
+  --dark: #30363d;
+  --grey-100: #f2f4f7;
+  --grey-200: #cbcfd4;
+  --grey-300: #747d88;
+  --grey-400: #3c444c;
+  --white: #fff;
+  --black: #000;
+}
+
+@import '_reset.css';
